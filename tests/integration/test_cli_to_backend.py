@@ -1,1 +1,0 @@
-# Ensure SDK <-> Backend communication
