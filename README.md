@@ -1,5 +1,7 @@
 # AI DevOps SDK 
 
+![CI](https://github.com/shahmeersensei/aidevops-sdk/actions/workflows/ci.yml/badge.svg)
+
 <img width="1280" height="600" alt="Generated Image November 01, 2025 - 6_17PM 2" src="https://github.com/user-attachments/assets/8d250ecf-a46e-47c2-8183-b4c0117942dd" />
  
 
@@ -134,11 +136,28 @@ pip freeze > backend/requirements.txt
 
 ### 4️⃣ Run the Backend Server
 
-```bash
-python -m uvicorn backend.app.main:app --reload
+Windows (cmd.exe)
+
+```cmd
+cd backend
+python -m uvicorn app.main:app --reload
 ```
 
-Expected output:
+PowerShell
+
+```powershell
+cd backend
+python -m uvicorn app.main:app --reload
+```
+
+macOS / Linux
+
+```bash
+cd backend
+python3 -m uvicorn app.main:app --reload
+```
+
+Expected output (uvicorn logs):
 
 ```
 INFO:     Uvicorn running on http://127.0.0.1:8000
@@ -235,11 +254,11 @@ This project is licensed under the [MIT License](LICENSE).
 
 | Task                                  | Status |
 | ------------------------------------- | ------ |
-| Repository contains all baseline docs | ☐      |
-| `/health` endpoint runs successfully  | ☐      |
-| SDK CLI returns valid response        | ☐      |
-| CI build passes without errors        | ☐      |
-| README setup verified cross-platform  | ☐      |
+| Repository contains all baseline docs | ✅      |
+| `/health` endpoint runs successfully  | ✅      |
+| SDK CLI returns valid response        | ✅      |
+| CI build passes without errors        | ✅      |
+| README setup verified cross-platform  | ✅      |
 
 ---
 
