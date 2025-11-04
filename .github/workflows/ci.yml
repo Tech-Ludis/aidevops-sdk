@@ -15,10 +15,23 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Cache Python pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/backend/requirements.txt') }}
+
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+
+      - name: Cache npm
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/sdk/package.json') }}
 
       - name: Install backend requirements
         run: |

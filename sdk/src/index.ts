@@ -1,3 +1,6 @@
+// Simple CLI health check for AI DevOps backend
+// Usage: npx ts-node sdk/src/index.ts
+
 import axios from "axios";
 
 async function main() {

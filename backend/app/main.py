@@ -16,3 +16,11 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok", "message": "AI DevOps Backend running smoothly"}
+
+
+if __name__ == "__main__":
+    # Runner stub for convenience on all platforms. Start directly with:
+    # python backend/app/main.py
+    import uvicorn
+
+    uvicorn.run("backend.app.main:app", host="0.0.0.0", port=8000, reload=True)
