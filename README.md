@@ -123,13 +123,7 @@ When activated, your prompt should show:
 ### 3️⃣ Install Backend Dependencies
 
 ```bash
-pip install fastapi uvicorn
-```
-
-(Optional)
-
-```bash
-pip freeze > backend/requirements.txt
+pip install -r backend/requirements.txt
 ```
 
 ---

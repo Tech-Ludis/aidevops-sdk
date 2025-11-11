@@ -2,23 +2,57 @@
 
 This folder contains quick examples for using the SDK and backend.
 
-1) Health check
+## 1. Health Check
 
-Start the backend:
+### 1.1. Start the Backend
+
+First, set up and run the FastAPI backend.
+
+#### Create & Activate Virtual Environment
+
+Open your terminal in the project root.
+
+**🪟 Windows CMD**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**💠 Windows PowerShell**
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+**🐧 macOS / Linux / WSL**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+#### Install Dependencies & Run
 
 ```bash
+# Install from requirements
+pip install -r backend/requirements.txt
+
+# Run the server from the root
 cd backend
-python -m venv venv
-# On Windows (cmd.exe)
-venv\Scripts\activate
-pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
-Run SDK CLI (from project root):
+### 1.2. Run SDK CLI
+
+In a **new terminal**, run the TypeScript CLI from the project root:
 
 ```bash
+# Install dependencies
 cd sdk
 npm install
+
+# Run the health check
 npx ts-node src/index.ts
+```
+
+You should see the backend's health status printed to your console.
 ```
